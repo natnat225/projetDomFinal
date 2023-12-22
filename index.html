@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projetDom</title>
+    <link rel="stylesheet" href="./css/app.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+<div>
+    <div class="container">
+        <div class="navbar">
+            <div class="max-w-10xl mx-auto justify-center f">
+
+                <nav class="border-gray-200  ">
+                <div class="mx-auto flex text-center justify-between fixed top-0 z-50 w-full bg-opacity-75 bg-purple-600 ml-0 mr-0 pl-0 pr-0" style="width: 100%;">
+                    <a href="#" class="flex">
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap my-5 mx-5 text-white ">Molengeek</span>
+                    </a>
+                    <button id="mobile-menu-button" data-collapse-toggle="mobile-menu" type="button" class="md:hidden ml-3 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div class="hidden md:block w-full md:w-auto" id="mobile-menu">
+                    <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium navbar-item">
+                        <li>
+                        <a href="#" class="text-white mt-5 text-lg md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-white md:p-0 rounded focus:outline-none mt-3" aria-current="page">Home</a>
+                        </li>
+                       
+                        <li>
+                        <a href="#" class="text-white mt-5 text-lg hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Services</a>
+                        </li>
+                        <li>
+                        <a href="#" class="text-white mt-5 text-lg hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Pricing</a>
+                        </li>
+                        <li>
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="mt- text-white text-lg mt-5 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-white  md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Dropdown <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbar" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                                <ul class="py-1" aria-labelledby="dropdownLargeButton">
+                                <li class="">
+                                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Settings</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Earnings</a>
+                                </li>
+                                </ul>
+                                <div class="py-1">
+                                <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sign out</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                        <a href="#" class="text-white mt-5 text-lg hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Contact</a>
+                        </li>
+                        <button class="custom-button mt-3 text-lg ">Get started</button> 
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container1 flex">
+    <div class="flex-1">
+        <h1 class="text-6xl mx-10 mb-10 text-white">Better Digital Experience With Cooding School</h1>
+        <button class="custom-button1 mt-1 text-lg mx-10">Get started</button> 
+    </div>
+    <div class="flex-1 ">
+        <img src="./img/hero-img.png" class="img-1" alt="" style="height: 400px">
+    </div>
+</div>
+</header>
+<section class="section1">
+            <div class="container2">
+                    <div class="flex-2">
+                        <h5 class="text-4xl mb-10">Voluptatem dignissimos provident quasi corporisvoluptates.</h5>
+                        <p class="italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <ul>
+                            <li><i class="fa-regular fa-circle-check p1" style="color: #5c058a;"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                            <li><i class="fa-regular fa-circle-check p1" style="color: #5c058a;"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                            <li><i class="fa-regular fa-circle-check p1" style="color: #5c058a;"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                        </ul>
+                        <button type="button" class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Read More</button>
+                </div>
+                <div class="flex-2">
+                    <img src="./img/about.jpg" class="img-2" alt="" style="height: 400px">
+                </div>
+            </div>
+</section>
+<section class="sectionCount">
+    <div class="container3">
+            <div class="Petit">
+                <h2>232</h2>
+                <p>Clients</p>
+            </div>
+            <div class="Petit">
+                <h2>521</h2>
+                <p>Projet down</p>
+            </div >
+            <div class="Petit">
+                <h2>1463</h2>
+                <p>Hours Of Support</p>
+            </div>
+            <div class="Petit">
+                <h2>15</h2>
+                <p>Hard Worker</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="gridBox ">
+    <h1 class="text-center text-3xl mt-12 mb-5">Service</h1>
+    <div class="underLine"></div>
+    
+    <p class="text-center mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptatem in asperiores suscipit non incidunt eos molestias vel aspernatur quas sunt eligendi accusamus voluptatibus et, quo qui repellat dolore tempora dolorem architecto, omnis amet sit adipisci numquam.</p>
+    <div class="container4 grid grid-cols-3 gap-4 text-center">
+        <div class="icon-container aspect-w-1 aspect-h-1 border border-gray-200 shadow p-4 flex flex-col justify-center hover:bg-red-500 group" style="height: 300px;">
+            <i class="fa-regular fa-star" style="color: #c10b0b;"></i>
+            <h1 class="text-2xl">Lorem, ipsum.</h1>
+            <p class="text-xs">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, similique.</p>
+        </div>
+        <div class="aspect-w-1 aspect-h-1 border border-gray-200 shadow p-4 flex flex-col justify-center hover:bg-yellow-500" style="height: 300px;">
+            <i class="fa-regular fa-star" style="color: #c10b0b;"></i>
+            <h1 class="text-2xl">Lorem, ipsum.</h1>
+            <p class="text-xs">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, similique.</p>
+        </div>
+        <div class="aspect-w-1 aspect-h-1 border border-gray-200 shadow p-4 flex flex-col justify-center hover:bg-blue-500" style="height: 300px;">
+            <i class="fa-regular fa-star text-current hover:text-white" style="color: #c10b0b;"></i>
+            <h1 class="text-2xl">Lorem, ipsum.</h1>
+            <p class="text-xs">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, similique.</p>
+        </div>
+        <div class="aspect-w-1 aspect-h-1 border border-gray-200 shadow p-4 flex flex-col justify-center hover:bg-green-500" style="height: 300px;">
+            <i class="fa-regular fa-envelope" style="color: #0a60f5;"></i>
+            <h1 class="text-2xl">Lorem, ipsum.</h1>
+            <p class="text-xs">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, similique.</p>
+        </div>
+        <div class="aspect-w-1 aspect-h-1 border border-gray-200 shadow p-4 flex flex-col justify-center hover:bg-purple-500" style="height: 300px;">
+            <i class="fa-regular fa-envelope" style="color: #0a60f5;"></i>
+            <h1 class="text-2xl">Lorem, ipsum.</h1>
+            <p class="text-xs">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, similique.</p>
+        </div>
+        <div class="aspect-w-1 aspect-h-1 border border-gray-200 shadow p-4 flex flex-col justify-center hover:bg-gray-500" style="height: 300px;">
+            <i class="fa-regular fa-image" style="color: #b602f7;"></i>
+            <h1 class="text-2xl">Lorem, ipsum.</h1>
+            <p class="text-xs">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, similique.</p>
+        </div>
+    </div>
+</section>
+<section class="features" style="height: auto;">
+    <h1 class="text-center text-3xl mt-5">Features</h1>
+    <div class="underLine">
+    </div>
+    <p class="text-center mx-5">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed consequuntur ab eos. Voluptatum illum repudiandae iure molestias, recusandae velit officiis nostrum quos hic, repellat asperiores!
+    </p>
+    <div class="container flex">
+        <div class="w-1/2 justify-center items-center mt-12 mx-10">
+        <div>
+            <i class="fa-regular fa-image fa-2xl" style="color: #5d097b; margin-right: 80%;"></i>
+            <h1 class="mx-5 mt-2">Lorem, ipsum dolor.</h1>
+            <p class="mx-5 mb-2">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, quae?
+            </p>
+        </div>
+        <div>
+            <i class="fa-regular fa-folder-open fa-2xl " style="color: #5d097b; margin-right: 80%"></i>
+            <h1 class="mx-5 mt-2">Lorem, ipsum dolor.</h1>
+            <p class="mx-5 mb-2">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, quae?
+            </p>
+        </div>
+        <div>
+            <i class="fa-regular fa-clipboard fa-2xl " style="color: #5d097b; margin-right: 80%"></i>
+            <h1 class="mx-5 mt-2">Lorem, ipsum dolor.</h1>
+            <p class="mx-5 mb-2">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, quae?
+            </p>
+        </div>
+        <div>
+            <i class="fa-regular fa-image fa-2xl " style="color: #5d097b; margin-right: 80%"></i>
+            <h1 class="mx-5 mt-2">Lorem, ipsum dolor.</h1>
+            <p class="mx-5">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, quae?
+            </p>
+        </div>
+    </div>
+    <div class="img-4 w-1/2">
+        <img src="./img/features.svg" alt="" style="width: 500px; height: 450px;">
+    </div>
+    </div>
+</section>
+<section>
+    <div class="container6"></div>
+</section>
+    <section class="tech">
+        <h2 id="h2Tech">Current Tech</h2>
+        <div class="techButtons">
+            <button class="techBtn">IA</button>
+            <button class="techBtn">DEV</button>
+            <button class="techBtn">UI/UX</button>
+        </div>
+        <div class="techBox">
+            <div class="techContainer">
+                <span class="subtitleTech">MENU</span>
+                <span class="titleTech">IA</span>
+                <div class="techContentBox">
+                    <div class="techContent">
+                        <img src="./img_menu/ia1.webp" class="imgTech">
+                        <span class="spanTech">Adobe IA</span>
+                        <p class="pTech">Lorem, deren, trataro, filede, nerada</p>
+                    </div>
+                    <div class="techContent">
+                        <img src="./img_menu/ia2.jpg" class="imgTech">
+                        <span class="spanTech">ChatGPT</span>
+                        <p class="pTech">Lorem, deren, trataro, filede, nerada</p>
+                    </div>
+                    <div class="techContent">
+                        <img src="./img_menu/ia3.jpg" class="imgTech">
+                        <span class="spanTech">Bard</span>
+                        <p class="pTech">Lorem, deren, trataro, filede, nerada</p>
+                    </div>
+                </div>
+            </div>
+            <div class="techContainer" style="display: none;">
+                <span class="subtitleTech">DEV</span>
+                <span class="titleTech">DEVELOPMENT</span>
+                <div class="techContentBox">
+                    <div class="techContent">
+                        <img src="./img_menu/dev1.png" class="imgTech">
+                        <span class="spanTech">Visual Studio Code</span>
+                        <p class="pTech">Lorem, deren, trataro, filede, nerada</p>
+                    </div>
+                    <div class="techContent">
+                        <img src="./img_menu/dev2.jpg" class="imgTech">
+                        <span class="spanTech">Atom</span>
+                        <p class="pTech">Lorem, deren, trataro, filede, nerada</p>
+                    </div>
+                    <div class="techContent">
+                        <img src="./img_menu/dev3.png" class="imgTech">
+                        <span class="spanTech">PY Charm</span>
+                        <p class="pTech">Lorem, deren, trataro, filede, nerada</p>
+                    </div>
+                </div>
+            </div>            <div class="techContainer" style="display: none;">
+                <span class="subtitleTech">UI/UX</span>
+                <span class="titleTech">UI/UX</span>
+                <div class="techContentBox">
+                    <div class="techContent">
+                        <img src="./img_menu/ui1.jpg" class="imgTech">
+                        <span class="spanTech">Adobe XD</span>
+                        <p class="pTech">Lorem, deren, trataro, filede, nerada</p>
+                    </div>
+                    <div class="techContent">
+                        <img src="./img_menu/ui2.jpg" class="imgTech">
+                        <span class="spanTech">Figma</span>
+                        <p class="pTech">Lorem, deren, trataro, filede, nerada</p>
+                    </div>
+                    <div class="techContent">
+                        <img src="./img_menu/ui3.png" class="imgTech">
+                        <span class="spanTech">Uizard</span>
+                        <p class="pTech">Lorem, deren, trataro, filede, nerada</p>
+                    </div>
+                </div>
+            </div>
+            <div class="techContainer" style="display: none;">.</div>
+        </div>
+    </section>
+</section>
+<section class="pricing" style="height: 80vh;">
+    <h1 class="text-xl text-center mb-4 font-bold">PRICING</h1>
+    <div class="underLine"></div>
+    <p class="mx-7 text-center text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo ipsa inventore, quod possimus eligendi cumque tempora esse numquam consectetur dolor in animi fugit voluptatum magnam officia velit doloribus at ipsum.</p>
+    <div class="btnPrix">
+        <p class="font-light">Month</p>
+        <div class="check">
+            <input class="check" id="check" type="checkbox">
+            <label " for="check"></label>
+          </div>
+          <p class="font-light">Year</p>
+
+    </div>
+
+    <div class="cardContainerPrice">
+    <div class="cardPrice">
+        <div class="bg-gray-100" style="height: 17%; width: 100%;">
+            <p class="text-center mt-4">Free</p>
+        </div>
+        <div class="abonnementText" style="height: 70%; width: 100%;">
+            <p class="text-2xl mb-4 mt-3 "><sup class="text-indigo-500">$</sup><span class="text-indigo-600"><span class="prices">5</span></span><span class="text-xs text-gray-300 period">/month</span></p>
+            <p class="text-md">Lorem ipsum dolor sit </p>
+            <br>
+            <p class="text-md text-gray-300 line-through">Lorem ipsum dolor sit.</p>
+            <br>
+            <p class="text-md text-gray-300 line-through">Lorem, ipsum.</p>
+            <br>
+            <p class="text-md text-gray-300 line-through">Lorem, ipsum dolor.</p>
+        </div>
+       
+        <div class="buttonPrice bg-gray-100" style="height: 17%; width: 100%;">
+            <button type="button" class="justify-center text-white bg-gradient-to-l from-purple-500 via-indigo-600 to-indigo-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-indigo-300 dark:focus:ring-indigo-800 shadow-lg shadow-indigo-500/50 dark:shadow-lg dark:shadow-indigo-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 h-10 mt-3">Buy Now</button>
+        </div>
+    </div>
+    <div class="cardPrice">
+        <div class="bg-indigo-600 rounded-t-lg" style="height: 17%; width: 100%;">
+            <p class="text-center mt-4 text-white">Buisness</p>
+        </div>
+        <div class="abonnementText" style="height: 70%; width: 100%;">
+            <p class="text-2xl mb-4 mt-3 "><sup class="text-indigo-500">$</sup><span class="prices text-indigo-500">10</span><span class="text-xs text-gray-300 period">/month</span></p>
+            <p class="text-md">Lorem ipsum dolor sit </p>
+            <br>
+            <p class="text-md">Lorem ipsum dolor sit.</p>
+            <br>
+            <p class="text-md text-gray-300 line-through">Lorem, ipsum.</p>
+            <br>
+            <p class="text-md text-gray-300 line-through">Lorem, ipsum dolor.</p>
+        </div>
+        <div class="buttonPrice bg-gray-100" style="height: 17%; width: 100%;">
+            <button type="button" class="justify-center text-white bg-gradient-to-l from-purple-500 via-indigo-600 to-indigo-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-indigo-300 dark:focus:ring-indigo-800 shadow-lg shadow-indigo-500/50 dark:shadow-lg dark:shadow-indigo-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 h-10 mt-3">Buy Now</button>
+        </div>
+
+    </div>
+    <div class="cardPrice">
+        <div class=" bg-gray-100" style="height: 17%; width: 100%;">
+            <p class="text-center mt-4">Developper</p>
+        </div>
+        <div class="abonnementText" style="height: 70%; width: 100%;">
+            <p class="text-2xl mb-4 mt-3 "><sup class="text-indigo-500">$</sup><span class="prices text-indigo-500">20</span><span class="text-xs text-gray-300 period">/month</span></p>
+            <p class="text-md">Lorem ipsum dolor sit </p>
+            <br>
+            <p class="text-md">Lorem ipsum dolor sit.</p>
+            <br>
+            <p class="text-md">Lorem, ipsum.</p>
+            <br>
+            <p class="text-md text-gray-300 line-through">Lorem, ipsum dolor.</p>
+        </div>
+        <div class="buttonPrice bg-gray-100" style="height: 17%; width: 100%;">
+            <button type="button" class="justify-center text-white bg-gradient-to-l from-purple-500 via-indigo-600 to-indigo-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-indigo-300 dark:focus:ring-indigo-800 shadow-lg shadow-indigo-500/50 dark:shadow-lg dark:shadow-indigo-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 h-10 mt-3">Buy Now</button>
+        </div>
+
+    </div>
+    <div class="cardPrice">
+        <div class=bg-gray-100" style="height: 17%; width: 100%;">
+            <p class="text-center mt-4 ">Ultimate</p>
+        </div>
+        <div class="abonnementText" style="height: 70%; width: 100%;">
+            <p class="text-2xl mb-4 mt-3 "><sup class="text-indigo-500">$</sup><span class="prices text-indigo-500">40</span><span class="text-xs text-gray-300 period">/month</span></p>
+            <p class="text-md">Lorem ipsum dolor sit </p>
+            <br>
+            <p class="text-md">Lorem ipsum dolor sit.</p>
+            <br>
+            <p class="text-md">Lorem, ipsum.</p>
+            <br>
+            <p class="text-md">Lorem, ipsum dolor.</p>
+        </div>
+        <div class="buttonPrice bg-gray-100" style="height: 17%; width: 100%;">
+            <button type="button" class="justify-center text-white bg-gradient-to-l from-purple-500 via-indigo-600 to-indigo-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-indigo-300 dark:focus:ring-indigo-800 shadow-lg shadow-indigo-500/50 dark:shadow-lg dark:shadow-indigo-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 h-10 mt-3">Buy Now</button>
+        </div>
+    </div>
+</div>
+</section>
+<section class="faqAccordeon bg-purple-800 flex flex-col items-center justify-center" style="height: 80vh; width: 100%;">
+    <h1 class="text-3xl text-center text-white mb-7 font-bold">F.A.Q</h1>
+    <div class="w-20 h-1 bg-purple-200 mb-3"></div>
+    <p class="text-center text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ad dolores ducimus maxime nostrum vel magni neque accusantium repudiandae reprehenderit fugiat obcaecati, hic ex vero. Qui consectetur itaque nulla rem?</p>
+    <p class="text-center mx-5 mt-10 text-white">
+        <div class="accordion-container flex flex-col gap-4" style="width: 80%;">
+            <div class="accordion w-full bg-white shadow-md rounded-md overflow-hidden mb-4" >
+                <div class="accordion-header bg-white-500 text-black p-4 cursor-pointer flex justify-between">
+                    <h2 class="text-lg"><i class="fa-regular fa-circle-question" style="color: #8576FB;"></i> Lorem ipsum, dolor sit amet consectetur adipisicing.</h2>
+                    <i class="accordion-icon fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-body h-0 transition-all duration-200 overflow-hidden">
+                    <p class="p-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae itaque ullam qui quidem minima ut.</p>
+                </div>
+            </div>
+            
+            <div class="accordion  bg-white shadow-md rounded-md overflow-hidden mb-4">
+                <div class="accordion-header p-4 cursor-pointer flex justify-between">
+                    <h2 class="text-lg"><i class="fa-regular fa-circle-question" style="color: #8576FB;"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, minus reiciendis. Consequatur sit dolores enim.</h2>
+                    <i class="accordion-icon fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-body h-0 transition-all duration-200 overflow-hidden">
+                    <p class="p-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, dolor inventore. Laboriosam dolor atque quis accusantium error aliquid temporibus rerum?</p>
+                </div>
+            </div>
+            <div class="accordion bg-white shadow-md rounded-md overflow-hidden mb-4">
+                <div class="accordion-header p-4 cursor-pointer flex justify-between">
+                    <h2 class="text-lg"><i class="fa-regular fa-circle-question" style="color: #8576FB;"></i> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+                    <i class="accordion-icon fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-body h-0 transition-all duration-200 overflow-hidden">
+                    <p class="p-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore rerum nobis culpa assumenda, dolorem necessitatibus.</p>
+                </div>
+            </div>
+            <div class="accordion bg-white shadow-md rounded-md overflow-hidden mb-4">
+                <div class="accordion-header  p-4 cursor-pointer flex justify-between">
+                    <h2 class="text-lg"><i class="fa-regular fa-circle-question" style="color: #8576FB;"></i> Lorem ipsum dolor sit amet consectetur.</h2>
+                    <i class="accordion-icon fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-body h-0 transition-all duration-200 overflow-hidden">
+                    <p class="p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ab asperiores voluptatem?</p>
+                </div>
+            </div>
+            <div class="accordion bg-white shadow-md rounded-md overflow-hidden mb-4">
+                <div class="accordion-header p-4 cursor-pointer flex justify-between">
+                    <h2 class="text-lg"><i class="fa-regular fa-circle-question" style="color: #8576FB;"></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, officiis!</h2>
+                    <i class="accordion-icon fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-body h-0 transition-all duration-200 overflow-hidden">
+                    <p class="p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero dicta ipsa architecto consequuntur.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </p>
+</section>
+<section class="contactForms items-center justify-center bg-gray-100 " style="height: auto; width: 100%; padding-top: 10px;">
+    <h2 class="text-2xl text-center text-black mb-7 font-bold mt-5">CONTACT</h2>
+    <div class="underLine mb-5"></div>
+    
+    <p class="text-center mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ad dolores ducimus maxime nostrum vel magni neque accusantium repudiandae reprehenderit fugiat obcaecati, hic ex vero. Qui consectetur itaque nulla rem?</p>
+<div class="container">
+    <div class="row flex">
+        <div class="col w-1/2">
+            <div class="box shadow-xl bg-white flex flex-col justify-center items-center gap-3 " style="width: 90%; height: 200px; margin-left: 5%">
+                <i class="fa-solid fa-location-dot fa-2xl mb-4" style="color: #4e18a0;"></i>
+                <p class="font-bold text-xl">ADRESSE</p>
+                <p>Place de la minoterie , 10 1080 Molenbeek</p>
+            
+            </div>
+
+        </div>
+        <div class="col w-1/2 flex gap-4">
+            <div class="box2  bg-white shadow-xl flex flex-col justify-center items-center gap-3 " style="width: 50%; height: 200px">
+                <i class="fa-regular fa-envelope fa-2xl mb-4" style="color: #8615d1;"></i>
+                <h2 class="font-bold text-xl " >EMAIL</h2>
+                <p>Molengeek@gmail.com</p>
+            </div>
+            
+            <div class="box2 bg-white shadow-xl flex flex-col justify-center items-center gap-3" style="width: 50%; height: 200px">
+                <i class="fa-solid fa-phone-volume fa-2xl mb-4" style="color: #8615d1;"></i>
+                <h2 class="font-bold text-xl">PHONE</h2>
+                <p>+32 1234 5678 9</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row flex">
+        <div class="col w-1/2 mt-5  mx-10">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.6937380587415!2d4.338645077089619!3d50.85535537167239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c38c275028d3%3A0xc7799151146ebf77!2sMolenGeek!5e0!3m2!1sfr!2sbe!4v1703159131241!5m2!1sfr!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col w-1/2 border-2 mt-5 bg-white shadow-xl">
+            <div class="p-4 py-6 rounded-lg md:p-8">
+                <form>
+                    <div class="-mx-2 md:items-center md:flex">
+                        <div class="flex-1 px-2">
+                            <label class="block mb-2 text-sm">First Name</label>
+                            <input type="text"  class="block w-full px-5 py-2.5 mt-2  bg-white border border-gray-200 rounded-lg  dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        </div>
+
+                        <div class="flex-1 px-2 mt-4 md:mt-0">
+                            <label class="block mb-2 text-sm ">Last Name</label>
+                            <input type="text" class="block w-full px-5 py-2.5 mt-2  bg-white border border-gray-200 rounded-lg  dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <label class="block mb-2 text-sm">Email address</label>
+                        <input type="email" class="block w-full px-5 py-2.5 mt-2   bg-white border border-gray-200 rounded-lg  dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    </div>
+
+                    <div class="w-full mt-4">
+                        <label class="block mb-2 text-sm ">Message</label>
+                        <textarea class="block w-full h-40 px-5 py-2.5 mt-2  bg-white border border-gray-200 rounded-lg md:h-35 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Message"></textarea>
+                    </div>
+
+                    <button class="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                        Send message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </form>
+ </div>
+</section>
+<footer class="bg-indigo-600" style="height: 40vh;">
+    <div class="p-4 mt-16 grid md:grid-cols-4 gap-12 xl:col-span-2 xl:mt-0 items-center footerBg1 mt-5">
+    <div>
+        <h3 class="text-sm font-semibold leading-6 text-white  ">Nouvelle Colonne</h3>
+        <ul role="list" class="mt-6 space-y-4">
+            <li><a class="text-sm leading-6 text-white hover:text-gray-900" href="#">Lien 1</a></li>
+            <li><a class="text-sm leading-6  text-white hover:text-gray-900" href="#">Lien 2</a></li>
+        </ul>
+    </div>
+    <div>
+        <h3 class="text-sm font-semibold leading-6 text-white">Links</h3>
+        <ul role="list" class="mt-6 space-y-4">
+            <li><a class="text-sm leading-6 text-white hover:text-gray-900" href="#">Homepage</a></li>
+            <li><a class="text-sm leading-6 text-white hover:text-gray-900" href="#">FAQ</a></li>
+            <li><a class="text-sm leading-6 text-white hover:text-gray-900" href="#">Sign up</a></li>
+        </ul>
+    </div>
+    <div>
+        <h3 class="text-sm font-semibold leading-6 text-white">Support</h3>
+        <ul role="list" class="mt-6 space-y-4">
+            <li>
+                <a class="text-sm leading-6 text-white hover:text-gray-900" href="#">Terms and
+                    Conditions
+                </a>
+            </li>
+            <li>
+                <a class="text-sm leading-6 text-white hover:text-gray-900" href="#">Privacy
+                    Policy
+                </a>
+            </li>
+            <li>
+                <a class="text-sm leading-6 text-white hover:text-gray-900" href="#">Legal Notice
+
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h3 class="text-sm font-semibold leading-6 text-white ">Subscribe to our Newsletter</h3>
+        <p class="mt-2 text-sm leading-6 text-white">We will inform you about promotions and exclusive offers as well
+            as new teaching materials.
+        </p>
+        <form class="mt-6 sm:flex sm:max-w-md">
+            <label for="email-address" class="sr-only"> Email address</label>
+            <input type="email" name="email" id="email-address" autocomplete="email" required="" class="w-full min-w-0 border appearance-none rounded-md border-gray-300 bg-white px-2  text-base leading-7 text-gray-900 placeholder-gray-400 shadow-sm focus:border-indigo-600 focus:ring-indigo-600 sm:w-64 sm:text-sm sm:leading-6 xl:w-full" placeholder="E-Mail Address">
+            <div class="mt-4 rounded-md sm:mt-0 sm:ml-4 sm:flex-shrink-0">
+                <div class="flex justify-end">
+                    <button class="inline-flex items-center justify-center px-4 py-2.5 border border-transparent text-sm font-medium rounded-md shadow-sm focus:outline-none ring-2 ring-offset-2 ring-transparent ring-offset-transparent disabled:bg-gray-400 dark:disabled:bg-slate-700 appearance-none text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-white w-full" type="submit">
+                        <div class="relative">
+                            <div class="">Subscribe</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div
+  class="flex flex-col text-center text-white">
+  <div class="container px-6 pt-6">
+    <div class="mb-6 flex justify-center">
+      <a
+        href="#!"
+        type="button"
+        class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+        data-te-ripple-init
+        data-te-ripple-color="light">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="mx-auto h-full w-4"
+          fill="currentColor"
+          viewBox="0 0 24 24">
+          <path
+            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+        </svg>
+      </a>
+
+      <a
+        href="#!"
+        type="button"
+        class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+        data-te-ripple-init
+        data-te-ripple-color="light">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="mx-auto h-full w-4"
+          fill="currentColor"
+          viewBox="0 0 24 24">
+          <path
+            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+        </svg>
+      </a>
+
+      <a
+        href="#!"
+        type="button"
+        class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+        data-te-ripple-init
+        data-te-ripple-color="light">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="mx-auto h-full w-4"
+          fill="currentColor"
+          viewBox="0 0 24 24">
+          <path
+            d="M7 11v2.4h3.97c-.16 1.029-1.2 3.02-3.97 3.02-2.39 0-4.34-1.979-4.34-4.42 0-2.44 1.95-4.42 4.34-4.42 1.36 0 2.27.58 2.79 1.08l1.9-1.83c-1.22-1.14-2.8-1.83-4.69-1.83-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.721-2.84 6.721-6.84 0-.46-.051-.81-.111-1.16h-6.61zm0 0 17 2h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2z"
+            fill-rule="evenodd"
+            clip-rule="evenodd" />
+        </svg>
+      </a>
+
+      <a
+        href="#!"
+        type="button"
+        class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+        data-te-ripple-init
+        data-te-ripple-color="light">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="mx-auto h-full w-4"
+          fill="currentColor"
+          viewBox="0 0 24 24">
+          <path
+            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+        </svg>
+      </a>
+
+      <a
+        href="#!"
+        type="button"
+        class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+        data-te-ripple-init
+        data-te-ripple-color="light">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="mx-auto h-full w-4"
+          fill="currentColor"
+          viewBox="0 0 24 24">
+          <path
+            d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+        </svg>
+      </a>
+
+      <a
+        href="#!"
+        type="button"
+        class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+        data-te-ripple-init
+        data-te-ripple-color="light">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="mx-auto h-full w-4"
+          fill="currentColor"
+          viewBox="0 0 24 24">
+          <path
+            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+</footer>
+
+
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>

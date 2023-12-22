@@ -1,0 +1,32 @@
+.underLine {
+  border-bottom: 3px solid #b10ce3;
+  width: 10%;
+  justify-content: center;
+  margin-left: 45%;
+  margin-bottom: 1%;
+}
+
+.container4 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .container4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .container4 {
+    grid-template-columns: 1fr !important;
+  }
+  .img-4 {
+    height: 250px !important;
+    width: 300px !important;
+  }
+}
+
+.icon-container:hover .fa-regular {
+  color: white !important;
+}
